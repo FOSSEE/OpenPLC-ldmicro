@@ -6,7 +6,7 @@ PIC16 CPUs from a ladder diagram.
 
 Building LDMICRO
 ======
-LDmicro is build using Microsoft Visual C++ compiler. Simply execute
+LDmicro is built using Microsoft Visual C++ compiler. Simply execute
 
 make.bat
 
@@ -19,7 +19,7 @@ these scripts, you need perl. I am using ActivePerl Community Edition
 http://www.activestate.com/activeperl
 
 The make files use GNU utilities which are not available on windows by default.
-Download GNU utilities for Win32
+Download GNU utilities for Win32 here
 
 http://unxutils.sourceforge.net
 
