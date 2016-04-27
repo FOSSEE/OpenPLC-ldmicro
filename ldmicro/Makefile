@@ -37,6 +37,22 @@ LDOBJS   = $(OBJDIR)\ldmicro.obj \
 
 HELPOBJ  = $(OBJDIR)\helptext.obj
 
+CLEANOBJ  = $(OBJDIR)\helptext.cpp \
+            $(OBJDIR)\helptext.obj \
+            $(OBJDIR)\lang-tables.h \
+            $(OBJDIR)\ldmicro.exe \
+            $(OBJDIR)\ldmicro.obj \
+            $(OBJDIR)\ldmicro.res \
+            $(OBJDIR)\freeze.obj \
+            $(OBJDIR)\ldinterpret.exe \
+            $(OBJDIR)\ldmicro.ilk \
+            $(OBJDIR)\ldmicro.pdb \
+            ldinterpret.exe \
+            ldinterpret.obj \
+            ldmicro.exe \
+            vc100.pdb \
+            reg\results
+
 LIBS = user32.lib gdi32.lib comctl32.lib advapi32.lib
 
 all: $(OBJDIR)/ldmicro.exe $(OBJDIR)/ldinterpret.exe
@@ -47,7 +63,8 @@ all: $(OBJDIR)/ldmicro.exe $(OBJDIR)/ldinterpret.exe
     @cd ..
 
 clean:
-	rm -f obj/*
+	rm -rf $(LDOBJS) $(CLEANOBJ)
+        rmdir reg\results
 
 lang.cpp: $(OBJDIR)/lang-tables.h
 
